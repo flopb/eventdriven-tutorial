@@ -1,0 +1,13 @@
+version: '2'
+services:
+  eventdriven_tutorial:
+    build: .
+    container_name: eventdriven_tutorial
+    environment:
+      URL: localhost
+    ports:
+      - "8000:80"
+    volumes:
+      - ./data/www:/etc/nginx/html
+    domainname: localhost
+    restart: always
